@@ -1,5 +1,3 @@
-# Complete for Ridge Regression
-
 import numpy as np
 import pytest
 from sklearn.linear_model import Ridge
@@ -28,9 +26,9 @@ class RidgeRegr:
         return self
     
     def predict(self, X):
-        # wejscie
+        # input
         #  X = np.array, shape = (n, m)
-        # zwraca
+        # returns
         #  Y = wektor(f(X_1), ..., f(X_n))
         n, m = X.shape
         return (np.column_stack((np.array([1]*n),X)) @ self.theta)
