@@ -1,4 +1,4 @@
-# Uzupelnij dla regresji liniowej
+# Complete for linear regression
 
 #!/usr/bin/env python3
 
