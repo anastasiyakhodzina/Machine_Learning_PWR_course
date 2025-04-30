@@ -1,3 +1,5 @@
+# Complete for Ridge Regression
+
 import numpy as np
 import pytest
 from sklearn.linear_model import Ridge
@@ -11,12 +13,12 @@ class RidgeRegr:
         # wejscie:
         #  X = np.array, shape = (n, m)
         #  Y = np.array, shape = (n)
-        # Znajduje theta (w przyblizeniu) minimalizujace kwadratowa funkcje kosztu L uzywajac metody iteracyjnej.
+        # Finds theta (approximately) minimizing the quadratic cost function L using an iterative method.
         n, m = X.shape
         X1= np.column_stack((np.array([1]*n),X)) # X with added column of ones
 
-        for i in range(1,3300): # mniej iteracjj=i (1000) dla theta_poczatkowe=[0.1,0.1,0.1,0.1]
-            Y_predicted = X1 @ theta_poczatkowe
+        for i in range(1,3300): # less iterations=i (1000) for  theta_poczatkowe=[0.1,0.1,0.1,0.1,0.1]
+            Y_predicted = X1 @ theta_poczatkowe 
             theta_zero = np.copy(theta_poczatkowe)
             theta_zero [0] = 0
             gradient_L_= 2*X1.T @ (Y_predicted - Y) + 2 * self.lambd * theta_zero
