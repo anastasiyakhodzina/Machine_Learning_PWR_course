@@ -1,4 +1,4 @@
-# Uzupełnij dla Ridge Regression
+# Complete for  Ridge Regression
 
 #!/usr/bin/env python3
 
@@ -11,10 +11,10 @@ class RidgeRegr:
         self.alpha = alpha
 
     def fit(self, X, Y):
-        # wejscie:
+        # input:
         #  X = np.array, shape = (n, m)
         #  Y = np.array, shape = (n)
-        # Znajduje theta (w przyblizeniu) minimalizujace kwadratowa funkcje kosztu L uzywajac metody iteracyjnej.
+        # Finds approximate theta which minimilizes   the quadratic cost function L using an iterative method.
         n, m = X.shape
         self.theta = np.zeros((m+1))
         return self
