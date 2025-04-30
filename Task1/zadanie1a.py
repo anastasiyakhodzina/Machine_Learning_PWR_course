@@ -5,11 +5,11 @@ from sklearn.linear_model import LinearRegression
 
 class LinearRegr:
     def fit(self, X, Y):
-        # wejscie:
+        # input:
         #  X = np.array, shape = (n, m)
         #  Y = np.array, shape = (n)
-        # Znajduje theta=beta minimalizujace kwadratowa funkcje kosztu L uzywajac wzoru.
-        # Uwaga: przed zastosowaniem wzoru do X nalezy dopisac kolumne zlozona z jedynek.
+        # Finds theta(=beta in my code) minimizing quadratic cost function L using the formula.
+        # Note: before applying the formula to X, add a column made up of ones.
         n, m = X.shape
         #self.theta = np.zeros((m+1))
         # np.ones(n)=np.array([1]*n)
@@ -29,9 +29,9 @@ class LinearRegr:
     
 
     def predict(self, X):
-        # wejscie
+        # input
         #  X = np.array, shape = (n, m)
-        # zwraca
+        # returns
         #  Y = wektor(f(X_1), ..., f(X_n))
         n,m = X.shape
         return (np.column_stack((np.array([1]*n),X)) @ self.theta)
