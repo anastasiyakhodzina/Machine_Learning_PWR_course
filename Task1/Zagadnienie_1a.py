@@ -11,16 +11,16 @@ class LinearRegr:
         # wejscie:
         #  X = np.array, shape = (n, m)
         #  Y = np.array, shape = (n)
-        # Znajduje theta minimalizujace kwadratowa funkcje kosztu L uzywajac wzoru.
-        # Uwaga: przed zastosowaniem wzoru do X nalezy dopisac kolumne zlozona z jedynek.
+        # Finds theta minimizing the quadratic cost function L using the formula.
+        # Note: before applying the formula to X, add a column made up of ones.
         n, m = X.shape
         self.theta = np.zeros((m+1))
         return self
     
     def predict(self, X):
-        # wejscie
+        # input
         #  X = np.array, shape = (k, m)
-        # zwraca
+        # returns
         #  Y = wektor(f(X_1), ..., f(X_k))
         k, m = X.shape
         return np.zeros((k))
