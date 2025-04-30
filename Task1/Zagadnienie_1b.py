@@ -20,9 +20,9 @@ class RidgeRegr:
         return self
     
     def predict(self, X):
-        # wejscie
+        # input
         #  X = np.array, shape = (k, m)
-        # zwraca
+        # returns
         #  Y = wektor(f(X_1), ..., f(X_k))
         k, m = X.shape
         return np.zeros((k))
